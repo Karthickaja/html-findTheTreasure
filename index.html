@@ -22,7 +22,7 @@
         document.querySelectorAll('#buttonList button').forEach(button => {
             button.addEventListener('click', function() {
                 const selectedItem = this.getAttribute('data-item');
-                window.location.href = `file:///E:/HTML_Project/Project/index2.html?item=${encodeURIComponent(selectedItem)}`;
+                window.location.href = `index2.html?item=${encodeURIComponent(selectedItem)}`;
             });
         });
     </script>
