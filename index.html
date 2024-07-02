@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_intro.css">
+    <title>Find the treaure</title>
+</head>
+<body>
+    <h1>Find the treasure!!</h1>
+    <div class="container">
+       <h1 class="title">Select an Character</h1>
+        <ul id="buttonList">
+            <li><button data-item="1">Luffy</button></li>
+            <li><button data-item="2">Nami</button></li>
+            <li><button data-item="3">Usopp</button></li>
+            <li><button data-item="4">Sanji</button></li>
+             <li><button data-item="5">Zoro</button></li>
+        </ul>
+    </div>
+     <script>
+        document.querySelectorAll('#buttonList button').forEach(button => {
+            button.addEventListener('click', function() {
+                const selectedItem = this.getAttribute('data-item');
+                window.location.href = `file:///E:/HTML_Project/Project/index2.html?item=${encodeURIComponent(selectedItem)}`;
+            });
+        });
+    </script>
+</body>
+</html>
